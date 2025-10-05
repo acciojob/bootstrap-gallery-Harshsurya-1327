@@ -1,16 +1,133 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Cards Gallery</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .card img {
+      cursor: pointer;
+      border-radius: 0.5rem;
+    }
+    .card {
+      border-radius: 0.5rem;
+    }
+    .card h6, .card p {
+      text-align: center;
+    }
+  </style>
 </head>
+<body class="bg-light">
 
-<body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <div class="container py-5">
+    <h2 class="text-center mb-4">Cards Gallery</h2>
+    <div class="row">
+
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://source.unsplash.com/400x300/?nature,flower" 
+               class="card-img-top" alt="Image1"
+               data-toggle="modal" data-target="#lightboxModal" onclick="showImage(this.src)">
+          <div class="card-body">
+            <h6>Beautiful Flower</h6>
+            <p>A vibrant flower captured in nature.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://source.unsplash.com/400x300/?nature,water" 
+               class="card-img-top" alt="Image2"
+               data-toggle="modal" data-target="#lightboxModal" onclick="showImage(this.src)">
+          <div class="card-body">
+            <h6>Flowing Water</h6>
+            <p>Crystal clear stream surrounded by greenery.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://source.unsplash.com/400x300/?nature,mountain" 
+               class="card-img-top" alt="Image3"
+               data-toggle="modal" data-target="#lightboxModal" onclick="showImage(this.src)">
+          <div class="card-body">
+            <h6>Majestic Mountain</h6>
+            <p>A breathtaking view of a mountain peak.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://source.unsplash.com/400x300/?nature,forest" 
+               class="card-img-top" alt="Image4"
+               data-toggle="modal" data-target="#lightboxModal" onclick="showImage(this.src)">
+          <div class="card-body">
+            <h6>Green Forest</h6>
+            <p>Lush green forest full of life and beauty.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://source.unsplash.com/400x300/?nature,desert" 
+               class="card-img-top" alt="Image5"
+               data-toggle="modal" data-target="#lightboxModal" onclick="showImage(this.src)">
+          <div class="card-body">
+            <h6>Golden Desert</h6>
+            <p>Serene desert landscape with golden sands.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://source.unsplash.com/400x300/?nature,beach" 
+               class="card-img-top" alt="Image6"
+               data-toggle="modal" data-target="#lightboxModal" onclick="showImage(this.src)">
+          <div class="card-body">
+            <h6>Sunny Beach</h6>
+            <p>A calm beach with waves hitting the shore.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal for Lightbox -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1" role="dialog" aria-labelledby="lightboxLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0">
+          <img id="lightboxImage" src="" class="img-fluid rounded" alt="Expanded view">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS + dependencies -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+  <!-- Script for Lightbox -->
+  <script>
+    function showImage(src) {
+      document.getElementById('lightboxImage').src = src;
+    }
+  </script>
 
 </body>
-
 </html>
